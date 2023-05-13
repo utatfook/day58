@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <!--添加部门的代码-->
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">新增部门</h3>
+            </div>
+            <div class="panel-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label>标题</label>
+                        <input type="text" placeholder="标题" name="title" class="form-control" >
+                    </div>
+                    <button type="submit" class="btn btn-primary">提 交</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
