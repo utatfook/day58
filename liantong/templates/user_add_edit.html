@@ -1,0 +1,21 @@
+{% extends 'common_add_edit.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css' %}">
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js' %}"></script>
+    <script src="{% static 'plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js'%} "></script>
+    <script>
+    $(function(){
+        $('#id_create_time').datepicker({
+            format:'yyyy-mm-dd',
+            language:'zh-CN',
+            todayBtn: true,
+            todayHighlight: true,
+            autoclose: true
+        })
+    })
+    </script>
+{% endblock %}

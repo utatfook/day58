@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="用户名">
+            <input type="file" name="文件">
+            <input type="submit" value="提交">
+        </form>
+    </div>
+{% endblock %}
