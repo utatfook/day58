@@ -17,12 +17,12 @@ def check_code(width=120, height=30, char_length=5, font_size=28):
         return random.randint(0, 255), random.randint(10, 255), random.randint(64, 255)
 
     # 写文字
-    # font = ImageFont.truetype(size=28)
+    font = ImageFont.truetype('Arial.ttf', size=28)
     for i in range(char_length):
         char = rndChar()
         code.append(char)
         h = random.randint(0, 4)
-        draw.text(xy=(i * width / char_length, h), text=char, fill=rndColor())
+        draw.text(xy=(i * width / char_length, h), font=font, text=char, fill=rndColor())
 
     # 写干扰点
     for i in range(40):
